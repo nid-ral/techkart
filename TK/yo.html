@@ -1,0 +1,8 @@
+<html><head><title>PIXEL</title><style type="text/css">
+            body
+            {
+                background-color:#222}
+            canvas{
+                position:absolute;top:50%;left:50%;margin-top:-200px;margin-left:-200px;box-shadow:0px 0px 50px #000}</style></head><body> <canvas></canvas> <script>var esp=document.getElementsByTagName("canvas")[0];var c=esp.getContext("2d");esp.width=400;esp.height=400;var animated=true;var ativeanimated;if(animated==true){ativeanimated=1;}else{ativeanimated=0;} var gera=[0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0];var pegagera,selectgera;selectgera=0;var aplicolor;esp.style.backgroundColor="#ddd";window.setInterval(function quadros(){c.clearRect(0,0,esp.width,esp.height);for(y=0;y<8;y++){for(x=0;x<8;x++){selectgera++;if(selectgera>63+ativeanimated){selectgera=0} pegagera=gera[selectgera];switch(pegagera){case 0:aplicolor="#222";break;case 1:aplicolor="#0af";break;} c.beginPath();
+    c.fillStyle=aplicolor;c.fillRect(x*50,y*50,50,50);c.closePath();}}},1000/25);</script> 
+    </body></html>
